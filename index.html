@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Logical to Physical Address</title>
+</head>
+<body>
+
+<h2>Logical → Physical Address Translation</h2>
+
+<input type="number" id="logical" placeholder="Enter Logical Address">
+<button onclick="translateAddress()">Translate</button>
+
+<p id="result"></p>
+
+<script>
+let baseAddress = 1000; // simulated base address in RAM
+
+function translateAddress(){
+    let logical = parseInt(document.getElementById("logical").value);
+    let physical = baseAddress + logical;
+
+    document.getElementById("result").innerHTML =
+    "Physical Address in RAM: " + physical;
+}
+</script>
+
+</body>
+</html>
